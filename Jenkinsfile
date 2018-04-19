@@ -1,14 +1,14 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'mypipelinelabel'
+    }
+
+  }
   stages {
     stage('Build') {
       steps {
         echo 'test'
-      }
-    }
-    stage('Build Test') {
-      steps {
-        echo 'testing....'
       }
     }
   }
